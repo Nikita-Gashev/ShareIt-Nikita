@@ -7,13 +7,11 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import ru.yandex.practicum.shareit.data.dto.ErrorResponse;
 import ru.yandex.practicum.shareit.data.exception.ItemNotFoundException;
 import ru.yandex.practicum.shareit.data.exception.NotAvailableEmailException;
 import ru.yandex.practicum.shareit.data.exception.NotAvailableOwnerException;
 import ru.yandex.practicum.shareit.data.exception.UserNotFoundException;
-import ru.yandex.practicum.shareit.util.ErrorResponse;
-import ru.yandex.practicum.shareit.validation.ValidationErrorResponse;
-import ru.yandex.practicum.shareit.validation.Violation;
 
 import java.util.List;
 
@@ -23,22 +21,27 @@ public class ErrorHandler {
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ValidationErrorResponse handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
-        final List<Violation> violations = e.getBindingResult().getFieldErrors().stream()
-                .map(error -> new Violation(error.getField(), error.getDefaultMessage()))
+    public ErrorResponse handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+        final List<ErrorResponse> errorResponses = e.getBindingResult().getFieldErrors().stream()
+                .map(error -> new ErrorResponse(error.getField(), error.getDefaultMessage()))
                 .toList();
-        log.warn(violations.toString());
-        return new ValidationErrorResponse(violations);
+        log.warn(e.getMessage());
+        return new ErrorResponse("ValidationException",
+                errorResponses.toString()
+        );
+
     }
 
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ValidationErrorResponse handleConstraintViolationException(ConstraintViolationException e) {
-        final List<Violation> violations = e.getConstraintViolations().stream()
-                .map(violation -> new Violation(violation.getPropertyPath().toString(), violation.getMessage()))
+    public ErrorResponse handleConstraintViolationException(ConstraintViolationException e) {
+        final List<ErrorResponse> errorResponses = e.getConstraintViolations().stream()
+                .map(violation -> new ErrorResponse(violation.getPropertyPath().toString(), violation.getMessage()))
                 .toList();
-        log.warn(violations.toString());
-        return new ValidationErrorResponse(violations);
+        log.warn(e.getMessage());
+        return new ErrorResponse("ValidationException",
+                errorResponses.toString()
+        );
     }
 
     @ExceptionHandler

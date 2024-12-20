@@ -9,5 +9,5 @@ public class Item {
     private String description;
     private boolean available;
     private User owner;
-    private ItemRequest request;
+    private Request request;
 }
