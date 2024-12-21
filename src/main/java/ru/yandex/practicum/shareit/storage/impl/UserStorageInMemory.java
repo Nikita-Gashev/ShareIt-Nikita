@@ -41,10 +41,7 @@ public class UserStorageInMemory implements UserStorage {
         if (users.isEmpty()) {
             return Collections.emptyList();
         }
-        List<User> usersList = new ArrayList<>();
-        for (Integer id : users.keySet()) {
-            usersList.add(id - 1, users.get(id));
-        }
-        return usersList;
+        Collection<User> values = users.values();
+        return new ArrayList<>(values);
     }
 }
