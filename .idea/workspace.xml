@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13752787-501e-4b60-b644-f76bc947104e" name="Changes" comment="Внес правки в спринт 13">
+    <list default="true" id="13752787-501e-4b60-b644-f76bc947104e" name="Changes" comment="Делаю спринт 14. Остались комментарии">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/dto/CommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/dto/CommentForItemDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/dto/CommentFromRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/CommentStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/impl/UserStorageInMemory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/impl/UserStorageInMemory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/controller/BookingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/controller/ErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/controller/ErrorHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/dto/ItemWithDateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/dto/ItemWithDateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/model/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/data/model/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/service/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/BookingStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/BookingStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/ItemStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/ItemStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/UserStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/storage/UserStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="task1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,13 +90,13 @@
     "Notification.DoNotAsk-Lombok plugin": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "task2",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Nikita/Downloads/DBN-20.0.zip",
+    "last_opened_file_path": "D:/Никита/Программирование/dev/filmorate-Nikita",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "settings.editor.splitter.proportion": "0.2324159"
   }
 }]]></component>
@@ -133,7 +152,31 @@
       <option name="project" value="LOCAL" />
       <updated>1734267875071</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Делаю спринт 14. Перенес юзер и айтем в БД">
+      <option name="closed" value="true" />
+      <created>1734789645017</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1734789645017</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Делаю спринт 14. Начал делать букинг">
+      <option name="closed" value="true" />
+      <created>1734793194589</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734793194589</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Делаю спринт 14. Остались комментарии">
+      <option name="closed" value="true" />
+      <created>1734877011477</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1734877011477</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +221,10 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Сделал юзеров (все тесты прошли)" />
     <MESSAGE value="Выполнил спринт 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="Выполнил спринт 13" />
+    <MESSAGE value="Делаю спринт 14. Перенес юзер и айтем в БД" />
+    <MESSAGE value="Делаю спринт 14. Начал делать букинг" />
+    <MESSAGE value="Делаю спринт 14. Остались комментарии" />
+    <option name="LAST_COMMIT_MESSAGE" value="Делаю спринт 14. Остались комментарии" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,15 +233,6 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ru/yandex/practicum/shareit/service/impl/UserServiceInMemory.java</url>
-          <line>24</line>
-          <properties class="ru.yandex.practicum.shareit.service.impl.UserServiceInMemory" method="add">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
