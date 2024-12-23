@@ -1,18 +1,7 @@
 package ru.yandex.practicum.shareit.storage;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import ru.yandex.practicum.shareit.data.model.User;
 
-import java.util.List;
-import java.util.Optional;
-
-public interface UserStorage {
-    User add(User user);
-
-    User update(int userId, User user);
-
-    void delete(int userId);
-
-    Optional<User> getById(int userId);
-
-    List<User> getAll();
+public interface UserStorage extends JpaRepository<User, Integer> {
 }

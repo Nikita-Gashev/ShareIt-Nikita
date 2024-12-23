@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.yandex.practicum.shareit.data.dto.ErrorResponse;
-import ru.yandex.practicum.shareit.data.exception.ItemNotFoundException;
-import ru.yandex.practicum.shareit.data.exception.NotAvailableEmailException;
-import ru.yandex.practicum.shareit.data.exception.NotAvailableOwnerException;
-import ru.yandex.practicum.shareit.data.exception.UserNotFoundException;
+import ru.yandex.practicum.shareit.data.exception.*;
 
 import java.util.List;
 
@@ -72,10 +69,28 @@ public class ErrorHandler {
     }
 
     @ExceptionHandler
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(HttpStatus.FORBIDDEN)
     public ErrorResponse handleNotAvailableOwnerException(NotAvailableOwnerException e) {
         log.warn(e.getMessage());
-        return new ErrorResponse("NotAvailableEmailException",
+        return new ErrorResponse("NotAvailableOwnerException",
+                e.getMessage()
+        );
+    }
+
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleValidationException(ValidationException e) {
+        log.warn(e.getMessage());
+        return new ErrorResponse("ValidationException",
+                e.getMessage()
+        );
+    }
+
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ErrorResponse handleBookingNotFoundException(BookingNotFoundException e) {
+        log.warn(e.getMessage());
+        return new ErrorResponse("BookingNotFoundException",
                 e.getMessage()
         );
     }

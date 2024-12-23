@@ -1,18 +1,35 @@
 package ru.yandex.practicum.shareit.storage;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import ru.yandex.practicum.shareit.data.model.Item;
 
 import java.util.List;
-import java.util.Optional;
 
-public interface ItemStorage {
-    Item add(Item item, int userId);
+public interface ItemStorage extends JpaRepository<Item, Integer> {
 
-    Item update(Item item, int userId, int itemId);
+    @Query("""
+            SELECT i
+            FROM Item AS i
+            JOIN i.owner AS o
+            WHERE o.id = ?1
+            """)
+    List<Item> findAllItemsByOwnerId(int userId);
 
-    Optional<Item> getById(int itemId);
+    @Query("""
+            SELECT i
+            FROM Item AS i
+            WHERE i.available = true
+            AND (i.name ILIKE CONCAT('%', ?1, '%')
+            OR i.description ILIKE CONCAT('%', ?1, '%'))
+            """)
+    List<Item> findTextInNameAndDescriptionItem(String text);
 
-    List<Item> getByOwnerId(int userId);
-
-    List<Item> getAllItems();
+    @Query("""
+            SELECT i
+            FROM Item AS i
+            JOIN FETCH i.owner
+            WHERE i.id = ?1
+            """)
+    Item findItemWithOwner(int itemId);
 }
